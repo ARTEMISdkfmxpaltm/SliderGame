@@ -89,7 +89,11 @@ namespace Slider_io_Game
             caption.TextAlign = ContentAlignment.MiddleCenter;
             picCanvas.Controls.Add(caption);
 
-
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.FileName = "SnapShot";
+            dialog.DefaultExt = "jpg";
+            dialog.Filter = "JPG Image File | *.jpg";
+            dialog.ValidateNames = true;
         }
 
         private void GameTimerEvent(object sender, EventArgs e)
