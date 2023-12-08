@@ -94,6 +94,16 @@ namespace Slider_io_Game
             dialog.DefaultExt = "jpg";
             dialog.Filter = "JPG Image File | *.jpg";
             dialog.ValidateNames = true;
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                int width = Convert.ToInt32(picCanvas.Width);
+                int height = Convert.ToInt32(picCanvas.Height);
+                Bitmap bmp = new Bitmap(width, height);
+                picCanvas.DrawToBitmap(bmp, new Rectangle(0, 0, width, height));
+                bmp.Save(dialog.FileName, ImageFormat.Jpeg);
+                picCanvas.Controls.Remove(caption);
+            }
         }
 
         private void GameTimerEvent(object sender, EventArgs e)
