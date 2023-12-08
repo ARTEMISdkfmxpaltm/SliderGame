@@ -242,9 +242,7 @@ namespace Slider_io_Game
         }
 
         private void Eatdirt()
-        {
-            //점수, 지렁이의 길이 증가 기능
-
+        {            
             score += 1;
 
             txtScore.Text = "Score: " + score;
@@ -256,7 +254,20 @@ namespace Slider_io_Game
             };
             slider.Add(body);
 
-            dirt = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };                       
+            dirt = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
+            
+            if (score % 2 == 0) 
+            {
+                IncreaseSliderSpeed();
+            }
+        }
+
+        private void IncreaseSliderSpeed()
+        {            
+            if (gameTimer.Interval > 10)
+            {
+                gameTimer.Interval -= 5;
+            }
         }
     }
 }
