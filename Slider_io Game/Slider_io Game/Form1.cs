@@ -31,12 +31,27 @@ namespace Slider_io_Game
 
         private void KeyIsUp(object sender, KeyEventArgs e)
         {
-
+            if (e.KeyCode == Keys.Left)
+            {
+                goLeft = false;
+            }
+            if (e.KeyCode == Keys.Right)
+            {
+                goRight = false;
+            }
+            if (e.KeyCode == Keys.Up)
+            {
+                goUp = false;
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                goDown = false;
+            }
         }
 
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
-
+            
         }
 
         private void StartGame(object sender, EventArgs e)
