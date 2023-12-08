@@ -269,5 +269,21 @@ namespace Slider_io_Game
                 gameTimer.Interval -= 5;
             }
         }
+
+        private void GameOver()
+        {           
+            gameTimer.Stop();
+            startButton.Enabled = true;
+            snapButton.Enabled = true;
+
+            if (score > highScore)
+            {                
+                highScore = score;
+
+                txtHighScore.Text = "High Score: " + Environment.NewLine + highScore;
+                txtHighScore.ForeColor = Color.Maroon;
+                txtHighScore.TextAlign = ContentAlignment.MiddleCenter;
+            }
+        }
     }
 }
