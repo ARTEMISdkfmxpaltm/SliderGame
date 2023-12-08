@@ -15,7 +15,10 @@ namespace Slider_io_Game
         private List<Circle> slider = new List<Circle>();
         private Circle dirt = new Circle();
 
-        
+        int maxWidth;
+        int maxHeight;
+
+
         public Form1()
         {
             InitializeComponent();
