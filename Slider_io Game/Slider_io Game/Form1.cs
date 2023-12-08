@@ -146,7 +146,44 @@ namespace Slider_io_Game
                             slider[i].Y--;
                             break;
                     }
+
+                    if (slider[i].X < 0)
+                    {
+                        slider[i].X = maxWidth;
+                    }
+                    if (slider[i].X > maxWidth)
+                    {
+                        slider[i].X = 0;
+                    }
+                    if (slider[i].Y < 0)
+                    {
+                        slider[i].Y = maxHeight;
+                    }
+                    if (slider[i].Y > maxHeight)
+                    {
+                        slider[i].Y = 0;
+                    }
+
+                    if (slider[i].X == dirt.X && slider[i].Y == dirt.Y)
+                    {
+                        Eatdirt();
+                    }
+                    for (int j = 1; j < slider.Count; j++)
+                    {
+                        if (slider[i].X == slider[j].X && slider[i].Y == slider[j].Y)
+                        {
+                            GameOver();
+                        }
+                    }
                 }
+                else
+                {
+                    slider[i].X = slider[i - 1].X;
+                    slider[i].Y = slider[i - 1].Y;
+                }
+            }
+            picCanvas.Invalidate();
+        }
 
         private void UpdatePictureBoxGraphics(object sender, PaintEventArgs e)
         {
