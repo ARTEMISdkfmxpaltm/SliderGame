@@ -126,7 +126,27 @@ namespace Slider_io_Game
             {
                 Settings.directions = "up";
             }
-        }
+
+            for (int i = slider.Count - 1; i >= 0; i--)
+            {
+                if (i == 0)
+                {
+                    switch (Settings.directions)
+                    {
+                        case "left":
+                            slider[i].X--;
+                            break;
+                        case "right":
+                            slider[i].X++;
+                            break;
+                        case "down":
+                            slider[i].Y++;
+                            break;
+                        case "up":
+                            slider[i].Y--;
+                            break;
+                    }
+                }
 
         private void UpdatePictureBoxGraphics(object sender, PaintEventArgs e)
         {
