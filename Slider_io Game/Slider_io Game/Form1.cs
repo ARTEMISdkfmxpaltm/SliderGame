@@ -74,7 +74,7 @@ namespace Slider_io_Game
 
         private void StartGame(object sender, EventArgs e)
         {
-
+            RestartGame();
         }
 
         private void TakeSnapShot(object sender, EventArgs e)
@@ -90,6 +90,32 @@ namespace Slider_io_Game
         private void UpdatePictureBoxGraphics(object sender, PaintEventArgs e)
         {
 
-        }        
+        }
+        private void RestartGame()
+        {            
+            maxWidth = picCanvas.Width / Settings.Width - 1;
+            maxHeight = picCanvas.Height / Settings.Height - 1;
+
+            slider.Clear();
+
+            startButton.Enabled = false;
+            snapButton.Enabled = false;
+            score = 0;
+            txtScore.Text = "Score: " + score;
+
+            Circle head = new Circle { X = 10, Y = 5 };
+            slider.Add(head); 
+
+            for (int i = 0; i < 10; i++)
+            {
+                Circle body = new Circle();
+                slider.Add(body);
+            }
+
+            dirt = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
+
+            gameTimer.Start();
+
+        }
     }
 }
