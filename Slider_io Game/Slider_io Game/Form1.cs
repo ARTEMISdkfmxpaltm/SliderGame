@@ -25,6 +25,8 @@ namespace Slider_io_Game
         public Form1()
         {
             InitializeComponent();
+
+            new Settings();
         }
     }
 }
