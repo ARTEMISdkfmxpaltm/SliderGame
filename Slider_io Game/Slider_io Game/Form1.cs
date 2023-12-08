@@ -187,7 +187,33 @@ namespace Slider_io_Game
 
         private void UpdatePictureBoxGraphics(object sender, PaintEventArgs e)
         {
+            Graphics canvas = e.Graphics;
 
+            Brush sliderColour;
+
+            for (int i = 0; i < slider.Count; i++)
+            {
+                if (i == 0)
+                {
+                    sliderColour = Brushes.Black;
+                }
+                else
+                {
+                    sliderColour = Brushes.Brown;
+                }
+                canvas.FillEllipse(sliderColour, new Rectangle
+                    (
+                    slider[i].X * Settings.Width,
+                    slider[i].Y * Settings.Height,
+                    Settings.Width, Settings.Height
+                    ));
+            }
+            canvas.FillEllipse(Brushes.DarkGreen, new Rectangle
+            (
+            dirt.X * Settings.Width,
+            dirt.Y * Settings.Height,
+            Settings.Width, Settings.Height
+            ));
         }
         private void RestartGame()
         {            
