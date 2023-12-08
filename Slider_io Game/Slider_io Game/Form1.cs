@@ -18,6 +18,9 @@ namespace Slider_io_Game
         int maxWidth;
         int maxHeight;
 
+        Random rand = new Random();
+
+        bool goLeft, goRight, goDown, goUp;
 
         public Form1()
         {
