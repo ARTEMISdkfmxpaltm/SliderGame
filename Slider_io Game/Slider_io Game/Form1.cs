@@ -110,7 +110,22 @@ namespace Slider_io_Game
 
         private void GameTimerEvent(object sender, EventArgs e)
         {
-
+            if (goLeft)
+            {
+                Settings.directions = "left";
+            }
+            if (goRight)
+            {
+                Settings.directions = "right";
+            }
+            if (goDown)
+            {
+                Settings.directions = "down";
+            }
+            if (goUp)
+            {
+                Settings.directions = "up";
+            }
         }
 
         private void UpdatePictureBoxGraphics(object sender, PaintEventArgs e)
