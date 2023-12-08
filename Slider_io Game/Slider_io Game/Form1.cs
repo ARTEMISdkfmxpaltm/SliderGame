@@ -12,6 +12,10 @@ namespace Slider_io_Game
 {
     public partial class Form1 : Form
     {
+        private List<Circle> slider = new List<Circle>();
+        private Circle dirt = new Circle();
+
+        
         public Form1()
         {
             InitializeComponent();

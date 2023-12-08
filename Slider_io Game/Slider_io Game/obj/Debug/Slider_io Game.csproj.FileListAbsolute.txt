@@ -1,0 +1,5 @@
+C:\Users\5050z\OneDrive\바탕 화면\SliderGame\Slider_io Game\Slider_io Game\obj\Debug\Slider_io Game.csproj.AssemblyReference.cache
+C:\Users\5050z\OneDrive\바탕 화면\SliderGame\Slider_io Game\Slider_io Game\obj\Debug\Slider_io_Game.Form1.resources
+C:\Users\5050z\OneDrive\바탕 화면\SliderGame\Slider_io Game\Slider_io Game\obj\Debug\Slider_io_Game.Properties.Resources.resources
+C:\Users\5050z\OneDrive\바탕 화면\SliderGame\Slider_io Game\Slider_io Game\obj\Debug\Slider_io Game.csproj.GenerateResource.cache
+C:\Users\5050z\OneDrive\바탕 화면\SliderGame\Slider_io Game\Slider_io Game\obj\Debug\Slider_io Game.csproj.CoreCompileInputs.cache
