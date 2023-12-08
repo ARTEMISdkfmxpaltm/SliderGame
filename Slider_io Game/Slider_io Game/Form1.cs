@@ -51,7 +51,22 @@ namespace Slider_io_Game
 
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
-            
+            if (e.KeyCode == Keys.Left && Settings.directions != "right")
+            {
+                goLeft = true;
+            }
+            if (e.KeyCode == Keys.Right && Settings.directions != "left")
+            {
+                goRight = true;
+            }
+            if (e.KeyCode == Keys.Up && Settings.directions != "down")
+            {
+                goUp = true;
+            }
+            if (e.KeyCode == Keys.Down && Settings.directions != "up")
+            {
+                goDown = true;
+            }
         }
 
         private void StartGame(object sender, EventArgs e)
