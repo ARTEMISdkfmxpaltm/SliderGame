@@ -79,6 +79,16 @@ namespace Slider_io_Game
 
         private void TakeSnapShot(object sender, EventArgs e)
         {
+            Label caption = new Label();
+            caption.Text = "My scored : " + score + " Highscore : " + highScore;
+            caption.Font = new Font("Ariel", 20, FontStyle.Bold);
+            caption.ForeColor = Color.Black;
+            caption.AutoSize = false;
+            caption.Width = picCanvas.Width;
+            caption.Height = 30;
+            caption.TextAlign = ContentAlignment.MiddleCenter;
+            picCanvas.Controls.Add(caption);
+
 
         }
 
