@@ -47,6 +47,8 @@
             this.picCanvas.Size = new System.Drawing.Size(700, 700);
             this.picCanvas.TabIndex = 2;
             this.picCanvas.TabStop = false;
+            this.picCanvas.Click += new System.EventHandler(this.StartGame);
+            this.picCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.UpdatePictureBoxGraphics);
             // 
             // txtHighScore
             // 
@@ -81,6 +83,7 @@
             this.snapButton.TabIndex = 3;
             this.snapButton.Text = "화면 캡쳐";
             this.snapButton.UseVisualStyleBackColor = false;
+            this.snapButton.Click += new System.EventHandler(this.TakeSnapShot);
             // 
             // startButton
             // 
@@ -94,6 +97,10 @@
             this.startButton.Text = "시작";
             this.startButton.UseVisualStyleBackColor = false;
             // 
+            // gameTimer
+            // 
+            this.gameTimer.Tick += new System.EventHandler(this.GameTimerEvent);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -106,6 +113,8 @@
             this.Controls.Add(this.picCanvas);
             this.Name = "Form1";
             this.Text = "Slider.Io";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyIsUp);
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
