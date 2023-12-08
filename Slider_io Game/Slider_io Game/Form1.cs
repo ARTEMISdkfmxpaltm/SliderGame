@@ -239,7 +239,24 @@ namespace Slider_io_Game
             dirt = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
 
             gameTimer.Start();
+        }
 
+        private void Eatdirt()
+        {
+            //점수, 지렁이의 길이 증가 기능
+
+            score += 1;
+
+            txtScore.Text = "Score: " + score;
+
+            Circle body = new Circle
+            {
+                X = slider[slider.Count - 1].X,
+                Y = slider[slider.Count - 1].Y
+            };
+            slider.Add(body);
+
+            dirt = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };                       
         }
     }
 }
